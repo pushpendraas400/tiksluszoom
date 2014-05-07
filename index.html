@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+<head>
+<title>Tikslus zoom documentation</title>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/rainbow.min.js"></script>
+<link rel="stylesheet" href="css/normalize.css" />
+<link rel="stylesheet" href="css/github.css" />
+<style>
+body{
+padding:20px;
+}
+#wrapper{
+margin:auto;
+width:80%;
+}
+a{
+text-decoration:none;
+color: cornflowerblue;
+}
+a:hover{
+text-decoration:underline;
+}
+
+#author_info{
+margin:auto;width:80%;margin-top:20px;margin-bottom:20px;
+}
+
+#author_info td.info{
+border-top: 1px solid #ddd;
+border-bottom: 1px solid #ddd;
+border-right: 1px solid #ddd;
+padding: 10px;
+}
+#author_info td.text{
+border-top: 1px solid #ddd;
+border-bottom: 1px solid #ddd;
+padding: 10px;
+}
+
+.tbl_parameters{
+
+}
+
+.tbl_parameters td{
+border:1px solid #ddd;
+padding:10px;
+}
+.tbl_parameters th{
+background-color:#000;
+color:#fff;
+}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+	<h1 class="main_heading">Tikslus Zoom [ <a href="examples.html"> Click here to view DEMO</a> ]</h1>
+	
+			<table id="author_info" style="">
+		<tr>
+		<td class='info'><label><b>Created:04/28/2014</b></label>
+		<label><b>By:Pushpendra Singh Chouhan</b></label>
+		<label><b>Email: pushpendra.as400@gmail.com</b></label>
+		</td>
+		<td class='text'>
+		<p>
+		Thank you for purchasing <b><a href="http://tikslus.com/tiksluszoom/demo">Tikslus Zoom</a></b>. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/tikslusbhopal">here</a>. Thanks so much!
+		</p>
+		</td>
+		</tr>
+		</table>
+                
+ 
+                
+		
+		<h4 class="heading">Getting started with Tikslus Zoom</h4>
+		
+                
+		<table cellpadding="10" cellspacing="10"  >
+		<tr>
+		<td>
+		<p class="medium_heading">Download and Unzip:</p>
+		<ul class="ulnone">
+		<li>
+		Unzip the contents of the Zipped file you have downloaded from codecanyon.net.
+		</li>
+		<li>
+		place tiksluszoom.css in the directory where you have kept your other css files. (for example: in CSS folder)
+		</li>
+		<li>
+		Place tiksluszoom.min.js and jquery.min.js in your JS library.
+		</li>
+		<li>
+		Place loader Image (loader.gif) with tiksluszoom.min.js.
+		</li>
+		</ul>
+		</td>
+		</tr>
+		
+		<tr>
+		<td>
+		<p class="medium_heading">Installation:</p>
+		<p>
+		Installing Tikslus Zoom is very easy and straight-forward. Simply add the following link and scripts tags with your proper paths and paste the following code within the Head tags of your HTML document.
+		</p>
+		<pre><code data-language="html">
+<link href="/css/tiksluszoom.css" rel="stylesheet">
+<script src="/js/jquery.min.js"></script>
+<script src="/js/tiksluszoom.min.js"></script>
+		</code>
+		</pre>
+	
+		</td>
+		</tr>
+		
+		<tr>
+		<td>
+		<p class="medium_heading">How to use plugin ?</p>
+		<p>Using Tiksluszoom is easy.TikslusZoom works with two images one low resolution for the visible image, and one high resolution for the zoomed image.</p>
+		<p>Inside a DIV element place the low resolution image with <strong class='note'>data-big-image</strong> attribute which specifies the high resolution image.</p>
+		<p>add class="tiksluszoom" to low resolution image </p>
+		<p class="medium_heading">HTML markup</p>
+		<pre>
+		<code data-language="html">
+		<div id="zoom">
+		
+		<img src="bike.jpg" data-big-image="large_bike.jpg" class="tiksluszoom" />
+		
+		</div>
+		</code>
+		</pre>
+		
+		</td>
+		</tr>
+		
+		<tr>
+		<td>
+		<p class="medium_heading">Activate using Jquery selector</p>
+		<p>Using Jquery selectory inside $(document).ready()  or $(window).load() to activate Zoom.</p>
+		<pre>
+		<code data-language="javascript">
+		<script language="javascript">
+		$(document).ready(function(){
+		$("#zoom").tiksluszoom();  //called with all default values
+		});
+		</script>
+		</code>
+		</pre>
+		</td>
+		</tr>
+		
+		
+		</table>
+		
+		<table  class="tbl_parameters" width="100%" class="table">
+		<tr>
+		<th>Parameter</th><th>Default value</th><th>Allowed Value</th><th>Description</th>
+		</tr>
+		<tr>
+		<td>lensWidth</td><td>100</td><td>Any number not greater than image Width</td><td>Defines the width of lens</td>
+		</tr>
+		
+		<tr>
+		<td>lensHeight</td><td>100</td><td>Any number not greater than image Height</td><td>Defines the Height of lens</td>
+		</tr>
+		
+		<tr>
+		<td>lensBackgroundColor</td><td>#fff</td><td>Valid color code (HEX value)</td><td>Defines the background color of lens</td>
+		</tr>
+		
+		<tr>
+		<td>lensOpacity</td><td>0.5</td><Td>between 0.1 to 1</td><td>Defines the opacity of lens</td>
+		</tr>
+		
+		<tr>
+		<td>lensBorderColor</td><td>#000</td><td>Valid color code (HEX value)</td><td>Border color of lens</td>
+		</tr>
+		
+		<tr>
+		<td>showLens</td><td>true</td><Td>True or False</td><td>If false lens will not be visible only mouse cursor will be shown</td>
+		</tr>
+		
+		<tr>
+		<td>loaderImage</td><td>loader.gif</td><td>Any valid gif image (a preloader)</td><td>shows the image during loading of high resolution image. You must provide full path of the image</td>
+		</tr>
+		
+		<tr>
+		<td>zoomAnimation</td><td>false</td><td>True or False</td><td>If TRUE Zoom image will be shown using some easing</td>
+		</tr>
+		
+		<tr>
+		<td>annotationsBorderColor</td><td>#000</td><td>Valid color code (HEX value)</td><td>annotation/hotspot border color</td>
+		</tr>
+		
+		<tr>
+		<td>annotationBackgroundColor</td><td>#fff</td><td>Valid color code (HEX value)</td><td>annotation/hotspot background color</td>
+		</tr>
+		
+		<tr>
+		<td>annotationOpacity</td><td>0.3</td><td>between 0.1 to 1</td><td>Opacity of annotation/hotspot</td>
+		</tr>
+		
+		
+		<tr>
+		<td>zoomPreviewWindowEffect</td><td>default</td><Td>default or fade</td><td>Zoom preview pane visibility effect. Default will just show the pane. Fade will fadein the pame</td>
+		</tr>
+		
+		<tr>
+		<td>annotations</td><td>Blank array</td><td>Valid javascript Array</td><td>an array containing the annotations which describes a hotspot.</td>
+		</tr>
+		<tr>
+		<Td colspan="4">
+		<p>Example:</p>
+		<pre>
+		<code data-language="javascript">
+			var annotations=new Array();
+			annotations[0]={x:88,y:53,annotation:'some text to define this hotspot'};
+			annotations[1]={x:100,y:450,annotation:'some text to define this hotspot'};
+		
+		</code>
+		</pre>
+		<p> here, each element of the array is an object containg annotation x position, annotation y position on the Low resolution image with text describing hotspot</p>
+		</td>
+		</tr>
+		
+		
+		</table>
+		
+</div>
+
+</body>
+</html>

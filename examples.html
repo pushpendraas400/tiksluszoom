@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+<head>
+<title>Tikslus Zoom examples</title>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/tiksluszoom.js"></script>
+<script type="text/javascript" src="js/rainbow.min.js"></script>
+<link rel="stylesheet" href="css/normalize.css" />
+<link rel="stylesheet" href="css/tiksluszoom.css" />
+<link rel="stylesheet" href="css/github.css" />
+<style>
+body{
+padding:20px;
+}
+</style>
+</head>
+<body>
+
+<h1 class="main_heading">Tikslus Zoom</h1>
+		
+		<h4 class="heading">Example 1: with default Parameters</h4>
+		<p>HTML</p>
+			<PRE>
+		<code data-language="html">
+		
+		<div id="example1">
+		<img src="images/bike.jpg" data-big-image="images/big_bike.jpg" class="tiksluszoom" />
+		</div>
+		</code>
+		</PRE>
+		
+		<p>Javascript</p>
+		<pre>
+		<code data-language="javascript">
+		
+		$(document).ready(function(){
+		$("#example1").tiksluszoom();
+		});
+	
+		</code>
+		</pre>
+		
+		<!--code implementation -->
+		<div id="zoom1">
+                
+                <img src="images/bike_blue_small.png" data-big-image="images/bike_blue.jpg"  class="tiksluszoom" />
+                
+		</div>
+		
+		<script language="javascript">
+		$(document).ready(function(){
+		$("#zoom1").tiksluszoom();
+		});
+		</script>
+
+		<h4 class="heading">Example 2: with hotspot/annotations</h4>
+		
+		<p>HTML</p>
+			<PRE>
+		<code data-language="html">
+		
+		<div id="example2">
+		<img src="images/bike.jpg" data-big-image="images/big_bike.jpg" class="tiksluszoom" />
+		</div>
+		</code>
+		</PRE>
+		
+		<p>Javascript</p>
+		<pre>
+		<code data-language="javascript">
+		
+		$(document).ready(function(){
+		var annotations=new Array();
+		annotations[0]={x:400,y:65,annotation:"Halogen mask. Range upto 500 meters"};
+		annotations[1]={x:420,y:200,annotation:"High quality oil based Disk brakes" };
+		$("#example2").tiksluszoom();
+		});
+	
+		</code>
+		</pre>
+		
+		<!--code implementation -->
+		<div id="zoom2">
+	
+                                <img src="images/bike_blue_small.png" data-big-image="images/bike_blue.jpg"  class="tiksluszoom" />
+                
+		</div>
+		<script language="javascript">
+		$(window).load(function(){
+		var annotations=new Array();
+		annotations[0]={x:400,y:65,annotation:"Halogen mask. Range upto 500 meters"};
+		annotations[1]={x:420,y:200,annotation:"High quality oil based Disk brakes" };
+		$("#zoom2").tiksluszoom({annotations:annotations});
+		});
+		</script>
+		
+		
+		
+			<h4 class="heading">Example 3: Custom Lens size</h4>
+		
+		<p>HTML</p>
+			<PRE>
+		<code data-language="html">
+		
+		<div id="example3">
+		<img src="images/bike.jpg" data-big-image="images/big_bike.jpg" class="tiksluszoom" />
+		</div>
+		</code>
+		</PRE>
+		
+		<p>Javascript</p>
+		<pre>
+		<code data-language="javascript">
+		
+		$(document).ready(function(){
+		$("#example3").tiksluszoom({lensWidth:150,lensHeight:70});
+		});
+	
+		</code>
+		</pre>
+		
+		<!--code implementation -->
+		<div id="zoom3">
+	
+                                        <img src="images/bike_blue_small.png" data-big-image="images/bike_blue.jpg"  class="tiksluszoom" />
+		</div>
+		<script language="javascript">
+		$(document).ready(function(){
+		$("#zoom3").tiksluszoom({lensWidth:150,lensHeight:70});
+		});
+		</script>
+		
+		
+		
+			<h4 class="heading">Example 4: Lens customization (opacity,background Color,Border Color)</h4>
+		
+		<p>HTML</p>
+			<PRE>
+		<code data-language="html">
+		
+		<div id="example4">
+		<img src="images/bike.jpg" data-big-image="images/big_bike.jpg" class="tiksluszoom" />
+		</div>
+		</code>
+		</PRE>
+		
+		<p>Javascript</p>
+		<pre>
+		<code data-language="javascript">
+		
+		$(document).ready(function(){
+		$("#example4").tiksluszoom({lensWidth:150,lensHeight:70,lensOpacity:0.8,lensBorderColor:'#ff0000',lensBackgroundColor:'#ffaacc',lensBorder:3});
+		});
+	
+		</code>
+		</pre>
+		
+		<!--code implementation -->
+		<div id="zoom4">
+		
+		                <img src="images/bike_blue_small.png" data-big-image="images/bike_blue.jpg"  class="tiksluszoom" />
+                    </div>
+		<script language="javascript">
+		$(document).ready(function(){
+		$("#zoom4").tiksluszoom({lensWidth:150,lensHeight:70,lensOpacity:0.8,lensBorderColor:"#ff0000",lensBackgroundColor:'#ffaacc',lensBorder:3});
+		});
+		</script>
+		
+		
+		
+		
+			<h4 class="heading">Example 5: animation</h4>
+		
+		<p>HTML</p>
+			<PRE>
+		<code data-language="html">
+		
+		<div id="example5">
+		<img src="images/bike.jpg" data-big-image="images/big_bike.jpg" class="tiksluszoom" />
+		</div>
+		</code>
+		</PRE>
+		
+		<p>Javascript</p>
+		<pre>
+		<code data-language="javascript">
+		
+		$(document).ready(function(){
+		$("#example5").tiksluszoom({zoomAnimation:true,zoomAnimationInterval:25});
+		});
+	
+		</code>
+		</pre>
+		
+		<!--code implementation -->
+		<div id="zoom5">
+		
+		  <img src="images/bike_blue_small.png" data-big-image="images/bike_blue.jpg"  class="tiksluszoom" />
+                    </div>
+		<script language="javascript">
+		$(document).ready(function(){
+		$("#zoom5").tiksluszoom({zoomAnimation:true,zoomAnimationInterval:25});
+		});
+		</script>
+		
+		
+
+
+
+</body>
+
+
+
+
+</html>
