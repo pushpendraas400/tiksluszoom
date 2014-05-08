@@ -1,0 +1,41 @@
+{
+  "name": "tiksluszoom",
+  "title": "Tikslus Zoom Image zoom plugin",
+  "version": "1.0.0",
+  "description": "Jquery Image zoom with annotations/hotspots. View Zoomed image in lightbox",
+  "homepage": "http://tikslus.com/plugins/free#tiksluszoom",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pushpendra10/tiksluszoom.git"
+  },
+  "keywords": [
+    "Image",
+    "jQuery",
+    "Zoom",
+    "maginify",
+    "magnifier",
+    "hotspot",
+    "annotation",
+	"lightbox",
+    "image",
+	"panning"
+    
+  ],
+  "author": {
+    "name": "Pushpendra Singh Chouhan",
+    "email": "pushpendra.as400@gmail.com"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/pushpendra10/tiksluszoom/blob/master/mit-license.txt"
+    }
+  ],
+  "bugs": "https://github.com/pushpendra10/tiksluszoom/issues",
+  "download": "http://tikslus.com/web/bundles/tikslustikslus/downloads/tiksluszoom.zip",
+  "demo" : "http://tikslus.com/tiksluszoom/demo",
+  "docs" : "http://tikslus.com/tiksluszoom/docs",
+  "dependencies": {
+    "jquery": ">=1.5"
+  }
+}
