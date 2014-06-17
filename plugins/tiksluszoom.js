@@ -1,7 +1,8 @@
 /*
-TikslusZoom v 1.0.0 
+TikslusZoom v 1.1.0 
 Author: Pushpendra Singh Chouhan @ pushpendra.as400@gmail.com
 http://tikslus.com
+added dynamic big image loading 
 */
 (function($){
    var TikslusZoom = function(element, options)
@@ -188,12 +189,13 @@ http://tikslus.com
 			//private method to get small image coordinates
 		
 		/***************Load big image in the zoom preview pan *********************/		
-		//private method
-		var loadBigImage=function(){
+		//public method can be called from outside
+		this.loadBigImage=function(bimg){
 			
 		var img_object=new Image();
 		var sm_coord=obj.getCoord();
-		img_object.src=big_img;
+		img_object.src=bimg || big_img;
+		//img_object.src=big_img;
 		var left=element.find(".zoom-preview").width()/2;
 		var top=element.find(".zoom-preview").height()/2;
 		var sm_left=sm_coord.left+sm_coord.right/2;
@@ -412,7 +414,7 @@ http://tikslus.com
 				attachLens(e.pageX,e.pageY);
 				
 				}
-				if(loaded==false){loadBigImage();}
+				if(loaded==false){obj.loadBigImage();}
 				if(!zoomPreviewWindowIsHidden()){
 				showZoomPreview();
 				}
