@@ -1,4 +1,4 @@
-TikslusZoom version 1.0.0
+TikslusZoom version 1.1.0
 ==============================
 
 Tikslus zoom is a jquery based image zoom plugin with following features:
