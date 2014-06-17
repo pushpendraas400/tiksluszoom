@@ -207,8 +207,69 @@ padding:20px;
 		</script>
 		
 		
+		
+				<h4 class="heading">Example 6: Load Big image dynamically </h4>
+		<p>HTML</p>
+			<PRE>
+		<code data-language="html">
+		
+		<div id="example6">
+		<img src="images/bike.jpg" data-big-image="images/big_bike.jpg" class="tiksluszoom" />
+		<br/>
+		<p><button id="button" >Change Big image Dynamically</button></p>
+		</div>
+		</code>
+		</PRE>
+		
+		<p>Javascript</p>
+		<pre>
+		<code data-language="javascript">
+		
+		$(document).ready(function(){
+		$("#example6").tiksluszoom();
+		
+		$("#button").click(function(e){
+		e.preventDefault();
+		var new_img="images/bike_blue_dynamic.jpg";
+		  var tiksluszoom=$("#example6").data('tiksluszoom');
+		tiksluszoom.loadBigImage(new_img);
+		});
+		
+		
+		});
+	
+		</code>
+		</pre>
+		
+		<!--code implementation -->
+		<div id="zoom6">
+                
+                <img src="images/bike_blue_small.png" data-big-image="images/bike_blue.jpg"  class="tiksluszoom" />
+             <br/>
+		<p><button id="button1" >Change Big image Dynamically</button></p>   
+		</div>
+		
+		<script language="javascript">
+			$(document).ready(function(){
+			$("#zoom6").tiksluszoom();
+		
+		$("#button1").click(function(e){
+		e.preventDefault();
+		var new_img="images/bike_blue_dynamic.jpg";
+		  var tiksluszoom=$("#zoom6").data('tiksluszoom');
+		tiksluszoom.loadBigImage(new_img);
+		});
+		
+		});
+		</script>
+		
+		
+		
+		
 
-
+	
+								
+							
 
 </body>
 
