@@ -196,6 +196,7 @@ added dynamic big image loading
 		var sm_coord=obj.getCoord();
 		img_object.src=bimg || big_img;
 		//img_object.src=big_img;
+		 big_img=img_object.src;
 		var left=element.find(".zoom-preview").width()/2;
 		var top=element.find(".zoom-preview").height()/2;
 		var sm_left=sm_coord.left+sm_coord.right/2;
