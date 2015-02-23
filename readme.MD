@@ -15,3 +15,6 @@ You can use Plugins folder directly in your projects.
 
 Visit http://tikslus.com/tiksluszoom/demo for a demo
 visit http://tikslus.com/tiksluszoom/docs for documentation
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/pushpendra10/tiksluszoom/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
